@@ -1,0 +1,5 @@
+1. Generación de la API KEY. En nuestro caso se utilizará la API interactiva : Author Retrieval API.
+2. Necesitaremos la identificación de autor y la API Key.
+3. Obtendremos los datos de SCOPUS mediante JAVA.
+4. Los leeremos y guardaremos con Código JAVA.
+5. Craremos y alimentaremos la base de datos.
