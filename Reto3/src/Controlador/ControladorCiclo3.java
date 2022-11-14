@@ -1,19 +1,25 @@
 package Controlador;
 
-import Modelo.ModeloCiclo3;
+import Modelo.Autor;
 import Vista.VistaCiclo3;
 
 public class ControladorCiclo3 {
 	//objetos vista y modelo
 	private VistaCiclo3 vista;
-	private ModeloCiclo3 modelo;
+	private Autor modelo;
 
 	//constructor para inicializar el modelo y la vista
-	public  ControladorCiclo3(ModeloCiclo3 modelo, VistaCiclo3 vista) {
+	public  ControladorCiclo3(Autor modelo, VistaCiclo3 vista) {
 		this.modelo = modelo;
 		this.vista = vista;
 			}
 	//getters y setters para el modelo
+		public String getID() {
+			return modelo.getID();
+		}	
+		public void setID(String ID) {
+			this.modelo.setUrl(ID);
+		}
 		public String getUrl() {
 			return modelo.getUrl();
 		}	
@@ -26,29 +32,11 @@ public class ControladorCiclo3 {
 		public void setEid(String Eid) {
 			this.modelo.setEid(Eid);
 		}
-		public String getTitulo() {
-			return modelo.getTitulo();
+		public String getdocument_count() {
+			return modelo.getdocument_count();
 		}
-		public void setTitulo(String Titulo) {
-			this.modelo.setTitulo(Titulo);
-		}
-		public String getCreador() {
-			return modelo.getCreador();
-		}
-		public void setCreador(String Creador) {
-			this.modelo.setCreador(Creador);
-		}
-		public String getFecha() {
-			return modelo.getFecha();
-		}
-		public void setFecha(String Fecha) {
-			this.modelo.setFecha(Fecha);
-		}
-		public String getCuenta() {
-			return modelo.getCuenta();
-		}
-		public void setCuenta(String Cuenta) {
-			this.modelo.setCuenta(Cuenta);
+		public void setdocument_count(String document_count) {
+			this.modelo.setEid(document_count);
 		}
 		public String getaffiliationName() {
 			return modelo.getaffiliationName();
@@ -56,14 +44,20 @@ public class ControladorCiclo3 {
 		public void setaffiliationName(String affiliationName) {
 			this.modelo.setaffiliationName(affiliationName);
 		}
-		public String getTipo() {
-			return modelo.getTipo();
+		public String getaffiliationCity() {
+			return modelo.getaffiliationCity();
 		}
-		public void setTipo(String Tipo) {
-			this.modelo.setTipo(Tipo);
+		public void setaffiliationCity(String affiliationCity) {
+			this.modelo.setaffiliationCity(affiliationCity);
+		}
+		public String getaffiliationContry() {
+			return modelo.getaffiliationContry();
+		}
+		public void setaffiliationContry(String affiliationContry) {
+			this.modelo.setaffiliationCity(affiliationContry);
 		}
 		//pasa el modelo a la vista para presentar los datos
 		public void actualizarVista() {
-			vista.mostrardatosURL(modelo.getUrl(),modelo.getEid(),modelo.getTitulo(),modelo.getCreador(),modelo.getFecha(),modelo.getCuenta(),modelo.getaffiliationName(),modelo.getTipo());
+			vista.mostrardatosURL(modelo.getID(),modelo.getUrl(),modelo.getEid(),modelo.getdocument_count(),modelo.getaffiliationName(),modelo.getaffiliationCity(),modelo.getaffiliationContry());
 		}
 }
